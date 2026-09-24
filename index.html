@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paulo Hilário | Personal Trainer - Treinamento Personalizado & Alta Performance</title>
+  <meta name="description" content="Acompanhamento individualizado e treinamento sob medida com o Personal Trainer Paulo Hilário. Método adaptado à sua realidade com foco em consistência, biomecânica e resultados reais.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2307080a'/><text x='50%' y='68%' font-size='55' font-weight='900' fill='%2300e676' font-family='system-ui' text-anchor='middle'>PH</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              main: '#07080a',
+              surface: '#0e1117',
+              elevated: '#151922',
+              card: '#11141c',
+              emerald: '#00e676',
+              'emerald-dim': '#059669',
+              'emerald-dark': '#064e3b',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#07080a] text-slate-100 selection:bg-[#00e676] selection:text-black">
+
+  <!-- ======================================================================
+       HEADER / NAVBAR
+       ====================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#07080a]/85 backdrop-blur-md border-b border-white/5 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400/20 to-emerald-500/5 border border-emerald-400/40 flex items-center justify-center font-extrabold text-emerald-400 text-lg tracking-tight group-hover:border-emerald-400 group-hover:scale-105 transition-all duration-300">
+          PH
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base font-extrabold tracking-wider text-white uppercase leading-none">Paulo Hilário</span>
+          <span class="text-[10px] font-semibold tracking-widest text-emerald-400 uppercase mt-1">Personal Trainer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#metodo" class="hover:text-emerald-400 transition-colors">O Método</a>
+        <a href="#servicos" class="hover:text-emerald-400 transition-colors">Serviços</a>
+        <a href="#evolucao" class="hover:text-emerald-400 transition-colors">Evolução</a>
+        <a href="#planos" class="hover:text-emerald-400 transition-colors">Planos</a>
+        <a href="#faq" class="hover:text-emerald-400 transition-colors">Dúvidas</a>
+      </nav>
+
+      <!-- CTA Button Desktop & Instagram -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://www.instagram.com/paulohilariopersonal/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:border-emerald-400/40 hover:bg-emerald-400/10 transition-all"
+           title="Instagram @paulohilariopersonal"
+           aria-label="Instagram Paulo Hilário">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/558296140864?text=Ol%C3%A1%2C%20Paulo!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20e%20saber%20mais%20sobre%20o%20acompanhamento%20personalizado." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-primary px-5 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 group">
+          <span>Agendar Avaliação</span>
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir menu" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#07080a] border-b border-white/10 px-6 py-6 space-y-4">
+      <nav class="flex flex-col space-y-3.5 text-base font-semibold text-slate-300">
+        <a href="#metodo" class="mobile-nav-link hover:text-emerald-400 py-1 transition-colors">O Método</a>
+        <a href="#servicos" class="mobile-nav-link hover:text-emerald-400 py-1 transition-colors">Serviços</a>
+        <a href="#evolucao" class="mobile-nav-link hover:text-emerald-400 py-1 transition-colors">Evolução</a>
+        <a href="#planos" class="mobile-nav-link hover:text-emerald-400 py-1 transition-colors">Planos</a>
+        <a href="#faq" class="mobile-nav-link hover:text-emerald-400 py-1 transition-colors">Dúvidas Frequentes</a>
+        <a href="https://www.instagram.com/paulohilariopersonal/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-emerald-400 py-1 font-semibold">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Instagram @paulohilariopersonal</span>
+        </a>
+      </nav>
+      <div class="pt-4 border-t border-white/5">
+        <a href="https://wa.me/558296140864?text=Ol%C3%A1%2C%20Paulo!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20e%20saber%20mais%20sobre%20o%20acompanhamento%20personalizado." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-primary w-full py-3.5 rounded-xl text-center font-bold flex items-center justify-center gap-2">
+          <span>Agendar Avaliação no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION
+         ====================================================================== -->
+    <section class="relative min-h-[92vh] lg:min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
+      
+      <!-- Background Gym Atmospheric Backdrop with subtle mask -->
+      <div class="absolute inset-0 z-0">
+        <img src="images/hero-gym-backdrop.jpg" 
+             alt="Ambiente de Treino Paulo Hilário" 
+             class="w-full h-full object-cover object-center opacity-30 hero-backdrop-mask">
+        <!-- Deep Dark Gradients for flawless integration -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#07080a] via-[#07080a]/75 to-[#07080a]/90"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#07080a] via-[#07080a]/60 to-transparent"></div>
+        <!-- Subtle emerald ambient glow in background center -->
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Copy & Actions (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col items-start text-left pt-6 lg:pt-0">
+            
+            <!-- Status Badge -->
+            <div class="badge-tag mb-6">
+              <span class="pulse-dot"></span>
+              <span>Consultoria Individualizada • Treinamento Sob Medida</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] mb-6">
+              Construa o seu <br>
+              <span class="text-gradient-emerald">melhor físico</span> com <br>
+              um método sob medida.
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg text-slate-300 max-w-xl font-normal leading-relaxed mb-8">
+              Sem fórmulas prontas de academia. Paulo Hilário desenvolve uma periodização personalizada adaptada à sua rotina real, biomecânica e objetivos — com acompanhamento técnico contínuo para você evoluir com consistência e sem lesões.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-12">
+              <a href="https://wa.me/558296140864?text=Ol%C3%A1%2C%20Paulo!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20e%20saber%20mais%20sobre%20o%20acompanhamento%20personalizado." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-primary px-8 py-4 rounded-xl text-base font-bold flex items-center justify-center gap-3 text-black">
+                <span>Agendar Avaliação Inicial</span>
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+
+              <a href="#metodo" 
+                 class="btn-secondary px-7 py-4 rounded-xl text-base font-semibold flex items-center justify-center gap-2">
+                <span>Conhecer o Método</span>
+                <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Value Indicators (Horizontal Telemetry Row) -->
+            <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-white/10 w-full max-w-lg">
+              <div>
+                <span class="block text-xl sm:text-2xl font-extrabold text-white">100%</span>
+                <span class="text-xs sm:text-sm text-slate-400 font-medium">Individualizado para sua rotina</span>
+              </div>
+              <div class="border-l border-white/10 pl-4 sm:pl-6">
+                <span class="block text-xl sm:text-2xl font-extrabold text-emerald-400">Biomecânica</span>
+                <span class="text-xs sm:text-sm text-slate-400 font-medium">Técnica e proteção articular</span>
+              </div>
+              <div class="border-l border-white/10 pl-4 sm:pl-6">
+                <span class="block text-xl sm:text-2xl font-extrabold text-white">Direto</span>
+                <span class="text-xs sm:text-sm text-slate-400 font-medium">Suporte ágil no WhatsApp</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Cutout Image of Paulo Hilário (5 cols) -->
+          <div class="lg:col-span-5 relative flex justify-center items-end mt-4 lg:mt-0">
+            
+            <!-- Radial Glow behind Paulo -->
+            <div class="absolute -bottom-8 w-72 sm:w-96 h-72 sm:h-96 bg-emerald-500/15 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <!-- Photo Container with smooth bottom fade -->
+            <div class="relative w-full max-w-md sm:max-w-lg flex justify-center">
+              <img src="images/paulo-hilario.png" 
+                   alt="Paulo Hilário Personal Trainer" 
+                   class="relative z-10 w-full max-h-[640px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] hero-image-mask transition-transform duration-500 hover:scale-[1.02]">
+
+              <!-- Floating Credential Badge -->
+              <div class="absolute bottom-6 left-2 sm:-left-4 z-20 bg-[#0e1117]/95 border border-emerald-500/30 backdrop-blur-md px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 max-w-[260px]">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white leading-tight">Paulo Hilário</p>
+                  <p class="text-[11px] text-emerald-400 font-medium">Personal Trainer Especialista</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================
+         2. MÉTODO SECTION
+         avaliação → planejamento → treinamento → acompanhamento → evolução
+         ====================================================================== -->
+    <section id="metodo" class="py-24 bg-[#0a0c10] border-t border-b border-white/5 relative">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-16">
+          <div class="badge-tag mb-3">
+            <span>A Ciência do Acompanhamento</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Engenharia de Treino em <span class="text-gradient-emerald">5 Etapas</span>
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+            Evolução física sustentável não acontece por sorte ou cópia de treinos da internet. O método de Paulo Hilário segue um fluxo técnico contínuo para transformar sua rotina em resultados mensuráveis.
+          </p>
+        </div>
+
+        <!-- 5-Step Pipeline Navigation (Interactive Stepper) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
+          
+          <button type="button" class="step-tab-btn active p-4 rounded-xl border border-white/10 bg-white/[0.02] text-left" data-step-index="0">
+            <span class="step-number inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold bg-white/10 text-white mb-3 transition-colors">01</span>
+            <span class="block text-xs uppercase tracking-wider text-emerald-400 font-semibold mb-1">Diagnóstico</span>
+            <span class="block text-sm font-bold text-white">Avaliação Inicial</span>
+          </button>
+
+          <button type="button" class="step-tab-btn p-4 rounded-xl border border-white/10 bg-white/[0.02] text-left" data-step-index="1">
+            <span class="step-number inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold bg-white/10 text-white mb-3 transition-colors">02</span>
+            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Estratégia</span>
+            <span class="block text-sm font-bold text-white">Planejamento</span>
+          </button>
+
+          <button type="button" class="step-tab-btn p-4 rounded-xl border border-white/10 bg-white/[0.02] text-left" data-step-index="2">
+            <span class="step-number inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold bg-white/10 text-white mb-3 transition-colors">03</span>
+            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Prática</span>
+            <span class="block text-sm font-bold text-white">Treinamento</span>
+          </button>
+
+          <button type="button" class="step-tab-btn p-4 rounded-xl border border-white/10 bg-white/[0.02] text-left" data-step-index="3">
+            <span class="step-number inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold bg-white/10 text-white mb-3 transition-colors">04</span>
+            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Consistência</span>
+            <span class="block text-sm font-bold text-white">Acompanhamento</span>
+          </button>
+
+          <button type="button" class="step-tab-btn p-4 rounded-xl border border-white/10 bg-white/[0.02] text-left" data-step-index="4">
+            <span class="step-number inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold bg-white/10 text-white mb-3 transition-colors">05</span>
+            <span class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Progressão</span>
+            <span class="block text-sm font-bold text-white">Evolução Real</span>
+          </button>
+
+        </div>
+
+        <!-- Detail Display Box & 3D Visual Render -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#0e1117] border border-white/10 rounded-3xl p-6 sm:p-10">
+          
+          <!-- Detailed Step Information (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex items-center gap-3">
+              <span id="step-detail-tag" class="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-emerald-400/10 text-emerald-400 border border-emerald-400/30">
+                FASE INICIAL
+              </span>
+              <span class="text-xs text-slate-400 font-medium">Metodologia Paulo Hilário</span>
+            </div>
+
+            <div>
+              <h3 id="step-detail-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
+                Avaliação Diagnóstica Individual
+              </h3>
+              <p id="step-detail-subtitle" class="text-emerald-400 text-sm sm:text-base font-semibold">
+                Entendimento profundo do seu corpo e da sua rotina
+              </p>
+            </div>
+
+            <p id="step-detail-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Antes de qualquer peso ser levantado, realizamos um raio-x completo do seu histórico esportivo, histórico de dores ou cirurgias, limitações de mobilidade articular, rotina de sono e horários disponíveis. O treino nasce da sua realidade, nunca de uma fórmula pronta.
+            </p>
+
+            <!-- Metrics Checklist -->
+            <div class="pt-4 border-t border-white/5">
+              <span class="block text-xs font-bold tracking-wider text-slate-400 uppercase mb-3">O que analisamos nesta etapa:</span>
+              <ul id="step-detail-metrics" class="space-y-2.5">
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Anamnese de Lesões & Postura</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Testes de Amplitude Articular</span>
+                </li>
+                <li class="flex items-center gap-3 text-sm text-slate-300">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Definição de Metas Claras</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://wa.me/558296140864?text=Ol%C3%A1%20Paulo!%20Quero%20fazer%20minha%20avalia%C3%A7%C3%A3o%20diagn%C3%B3stica%20inicial." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors group">
+                <span>Quero iniciar pela Avaliação Diagnóstica</span>
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- 3D Conceptual Render Visual (5 cols) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 group shadow-2xl bg-black">
+              <img src="images/method-composition.jpg" 
+                   alt="Composição Conceitual do Método Paulo Hilário" 
+                   class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+              
+              <!-- Subtle inner telemetry overlay -->
+              <div class="absolute bottom-4 left-4 right-4 bg-[#07080a]/90 backdrop-blur-md border border-white/10 p-3 rounded-xl flex items-center justify-between text-xs">
+                <span class="text-slate-400 font-medium">Controle de Carga & Volume</span>
+                <span class="text-emerald-400 font-bold flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Monitorado
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SERVIÇOS SECTION
+         - Treino personalizado
+         - Acompanhamento individual
+         - Orientação sobre suplementação
+         - Suporte e acompanhamento via WhatsApp
+         ====================================================================== -->
+    <section id="servicos" class="py-24 bg-[#07080a] relative">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-2xl">
+            <div class="badge-tag mb-3">
+              <span>Acompanhamento Completo</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              Os Pilares do Seu <span class="text-gradient-emerald">Treinamento</span>
+            </h2>
+          </div>
+          <p class="text-slate-400 text-sm sm:text-base max-w-md">
+            Cada serviço foi desenhado para eliminar dúvidas e criar um ambiente seguro onde sua única preocupação é executar o plano.
+          </p>
+        </div>
+
+        <!-- Dynamic Editorial Grid: Image on Left + 4 Pillars on Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Cinematic Coaching Photo (5 cols) -->
+          <div class="lg:col-span-5 relative flex flex-col justify-between rounded-3xl overflow-hidden border border-white/10 group min-h-[460px]">
+            <img src="images/training-concept.jpg" 
+                 alt="Orientação Técnica no Treinamento Individual" 
+                 class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105">
+            
+            <!-- Dark Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#07080a] via-[#07080a]/40 to-transparent"></div>
+
+            <div class="relative z-10 p-6 flex justify-between items-start">
+              <span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-black/60 backdrop-blur-md border border-white/15 text-emerald-400">
+                Atenção Técnica
+              </span>
+            </div>
+
+            <div class="relative z-10 p-6 sm:p-8">
+              <p class="text-xs uppercase font-extrabold tracking-widest text-emerald-400 mb-1">Supervisão Ativa</p>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-snug">
+                Correção de movimento em cada repetição
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                Ajuste fino de pegada, ângulo articular e controle de respiração para você treinar no limite correto sem comprometer suas articulações.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 Core Service Blocks (7 cols) -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Service 1 -->
+            <div class="p-6 sm:p-7 rounded-2xl bg-[#0e1117] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-emerald-400 mb-5 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Treino Personalizado</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                  Prescrição exclusiva baseada na sua biomecânica e objetivo: hipertrofia, força, queima de gordura ou definição muscular.
+                </p>
+              </div>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                <span>Periodização estruturada</span>
+              </span>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="p-6 sm:p-7 rounded-2xl bg-[#0e1117] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-emerald-400 mb-5 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Acompanhamento Individual</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                  Feedback minucioso sobre execução técnica, cadência e amplitude, evitando lesões comuns e acelerando sua resposta muscular.
+                </p>
+              </div>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                <span>Atenção aos detalhes</span>
+              </span>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="p-6 sm:p-7 rounded-2xl bg-[#0e1117] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-emerald-400 mb-5 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Orientação de Suplementação</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                  Estratégias nutricionais práticas e suplementação baseada em evidências para otimizar sua recuperação e síntese proteica.
+                </p>
+              </div>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                <span>Rendimento potencializado</span>
+              </span>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="p-6 sm:p-7 rounded-2xl bg-[#0e1117] border border-white/10 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-emerald-400 mb-5 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/30 transition-colors">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Suporte Direto no WhatsApp</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                  Envie vídeos dos seus exercícios, tire dúvidas de cargas e receba respostas rápidas direto de Paulo Hilário, sem assistentes virtuais.
+                </p>
+              </div>
+              <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                <span>Canal direto com o treinador</span>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. RESULTADOS & EVOLUÇÃO
+         Composição conceitual sem falsas provas sociais
+         ====================================================================== -->
+    <section id="evolucao" class="py-24 bg-[#0a0c10] border-t border-b border-white/5 relative">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-16">
+          <div class="badge-tag mb-3">
+            <span>Progressão Real & Sustentável</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            A Ciência da <span class="text-gradient-emerald">Transformação Física</span>
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+            Sem promessas milagrosas ou atalhos ilusórios. A evolução do seu corpo é uma consequência direta de estímulos progressivos, técnica apurada e disciplina constante.
+          </p>
+        </div>
+
+        <!-- 3D Progression Concept Banner -->
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 mb-12 shadow-2xl bg-black">
+          <img src="images/results-evolution.jpg" 
+               alt="Gráfico Conceitual de Evolução Física e Performance" 
+               class="w-full h-auto max-h-[500px] object-cover object-center">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#07080a] via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#07080a]/80 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/10">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-widest text-emerald-400 block mb-1">Curva de Adaptação Fisiológica</span>
+              <p class="text-white font-bold text-sm sm:text-base">Base Sólida → Ganho de Força → Densidade → Maestria e Consistência</p>
+            </div>
+            <a href="https://wa.me/558296140864?text=Ol%C3%A1%20Paulo!%20Gostaria%20de%20iniciar%20minha%20evolu%C3%A7%C3%A3o%20f%C3%ADsica%20com%20voc%C3%AA." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-primary px-5 py-2.5 rounded-xl text-xs font-bold shrink-0 text-center">
+              Começar Minha Evolução
+            </a>
+          </div>
+        </div>
+
+        <!-- The 4 Pillars of Consistent Transformation (Not Cards, but Structured Architectural Rows) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-[#0e1117] border border-white/5 space-y-3">
+            <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">Pilar 01</span>
+            <h3 class="text-lg font-bold text-white">Sobrecarga Progressiva</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              O músculo só cresce sob novos desafios calculados. Ajustamos peso, repetições e densidade sem queimar etapas.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#0e1117] border border-white/5 space-y-3">
+            <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">Pilar 02</span>
+            <h3 class="text-lg font-bold text-white">Longevidade Articular</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Músculo treinado, articulações e tendões protegidos. Biomecânica focada em evitar bursites, tendinites e dores lombares.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#0e1117] border border-white/5 space-y-3">
+            <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">Pilar 03</span>
+            <h3 class="text-lg font-bold text-white">Aderência à Rotina</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              O melhor treino é o que você consegue cumprir no seu dia a dia real. Seja 3 ou 5 dias na semana, o plano funciona.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#0e1117] border border-white/5 space-y-3">
+            <span class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">Pilar 04</span>
+            <h3 class="text-lg font-bold text-white">Ajustes por Dados</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Feedback contínuo de esforço percebido, recuperação muscular e disposição para recalibrar o volume antes de qualquer platô.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. PLANOS & INVESTIMENTO
+         - Mensal: R$ 250/mês
+         - Trimestral: R$ 600/3 meses (Destaque "Mais Escolhido")
+         - Anual: R$ 1.800/ano
+         ====================================================================== -->
+    <section id="planos" class="py-24 bg-[#07080a] relative">
+      
+      <!-- Subtle top light accent -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-emerald-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="badge-tag mb-3">
+            <span>Investimento Transparente</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Escolha o Plano Ideal para a <br><span class="text-gradient-emerald">Sua Transformação</span>
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Valores claros e objetivos para você treinar com acompanhamento profissional de alto nível.
+          </p>
+        </div>
+
+        <!-- 3 Plans Grid with Clear Hierarchy -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+          
+          <!-- Plano 1: Mensal -->
+          <div class="p-8 rounded-3xl bg-[#0e1117] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Iniciação</span>
+                <span class="text-xs font-medium text-slate-500">Ciclo de 30 dias</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Mensal</h3>
+              <p class="text-slate-400 text-xs sm:text-sm mb-6">
+                Para quem quer testar a metodologia e receber um planejamento sob medida inicial.
+              </p>
+
+              <!-- Price Box -->
+              <div class="pb-6 mb-6 border-b border-white/5">
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-semibold text-slate-400">R$</span>
+                  <span class="text-4xl font-extrabold text-white">250</span>
+                  <span class="text-sm text-slate-400 font-medium">/mês</span>
+                </div>
+                <span class="text-[11px] text-slate-500 mt-1 block">Renovação mensal sem fidelidade</span>
+              </div>
+
+              <!-- Features List -->
+              <ul class="space-y-3.5 mb-8 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Avaliação diagnóstica completa</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Treino individualizado mensal</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Suporte no WhatsApp em horário comercial</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Ajustes quinzenais de cargas</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/558296140864?text=Ol%C3%A1%20Paulo!%20Gostaria%20de%20come%C3%A7ar%20meu%20acompanhamento%20com%20o%20Plano%20Mensal%20(R$%20250)." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-secondary w-full py-3.5 rounded-xl text-center text-sm font-bold flex items-center justify-center gap-2">
+              <span>Iniciar Plano Mensal</span>
+            </a>
+          </div>
+
+          <!-- Plano 2: Trimestral (DESTAQUE "MAIS ESCOLHIDO") -->
+          <div class="relative p-8 rounded-3xl bg-[#111622] border-2 border-emerald-400/60 shadow-[0_0_50px_rgba(0,230,118,0.15)] flex flex-col justify-between transform lg:-translate-y-2">
+            
+            <!-- Most Popular Badge -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-400 to-emerald-500 text-black font-extrabold text-[11px] tracking-wider uppercase py-1 px-4 rounded-full shadow-lg">
+              Mais Escolhido
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-4 mt-1">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Consolidação</span>
+                <span class="text-xs font-semibold text-emerald-300 bg-emerald-400/10 px-2.5 py-0.5 rounded-full border border-emerald-400/20">Economize R$ 150</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Trimestral</h3>
+              <p class="text-slate-300 text-xs sm:text-sm mb-6">
+                O período exato para consolidação de hábitos, adaptação neuromuscular e ganhos visíveis.
+              </p>
+
+              <!-- Price Box -->
+              <div class="pb-6 mb-6 border-b border-white/10">
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-semibold text-slate-400">R$</span>
+                  <span class="text-4xl font-extrabold text-white">600</span>
+                  <span class="text-sm text-slate-400 font-medium">/ 3 meses</span>
+                </div>
+                <span class="text-xs font-semibold text-emerald-400 mt-1 block">Equivalente a apenas R$ 200/mês</span>
+              </div>
+
+              <!-- Features List -->
+              <ul class="space-y-3.5 mb-8 text-sm text-slate-200">
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="font-medium text-white">Tudo incluso no Plano Mensal</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Periodização completa de 12 semanas (3 fases)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Análise contínua de vídeos de execução</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Consultoria e direcionamento de suplementação</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Suporte prioritário via WhatsApp</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/558296140864?text=Ol%C3%A1%20Paulo!%20Quero%20aproveitar%20o%20Plano%20Trimestral%20(R$%20600)%20para%20come%C3%A7ar%20meu%20treinamento." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-primary w-full py-4 rounded-xl text-center text-sm font-bold flex items-center justify-center gap-2 text-black shadow-lg">
+              <span>Garantir Vaga no Trimestral</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Plano 3: Anual -->
+          <div class="p-8 rounded-3xl bg-[#0e1117] border border-white/10 flex flex-col justify-between hover:border-white/20 transition-all duration-300">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Transformação Total</span>
+                <span class="text-xs font-semibold text-emerald-400 bg-emerald-400/10 px-2.5 py-0.5 rounded-full border border-emerald-400/20">Economize R$ 1.200</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2">Anual</h3>
+              <p class="text-slate-400 text-xs sm:text-sm mb-6">
+                Para quem busca uma transformação física completa e acompanhamento contínuo o ano todo.
+              </p>
+
+              <!-- Price Box -->
+              <div class="pb-6 mb-6 border-b border-white/5">
+                <div class="flex items-baseline gap-1">
+                  <span class="text-sm font-semibold text-slate-400">R$</span>
+                  <span class="text-4xl font-extrabold text-white">1.800</span>
+                  <span class="text-sm text-slate-400 font-medium">/ ano</span>
+                </div>
+                <span class="text-xs font-semibold text-emerald-400 mt-1 block">Equivalente a apenas R$ 150/mês</span>
+              </div>
+
+              <!-- Features List -->
+              <ul class="space-y-3.5 mb-8 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="font-medium text-white">Tudo do Plano Trimestral</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Periodização anual completa com 4 ciclos macro</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Planejamento de deload e recuperação articular</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Reavaliações físicas completas a cada ciclo</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Canal direto exclusivo com Paulo Hilário</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/558296140864?text=Ol%C3%A1%20Paulo!%20Gostaria%20de%20aderir%20ao%20Plano%20Anual%20(R$%201.800)%20para%20transformar%20meu%20f%C3%ADsico." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-secondary w-full py-3.5 rounded-xl text-center text-sm font-bold flex items-center justify-center gap-2">
+              <span>Iniciar Plano Anual</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Payment Methods & Guarantees Note -->
+        <div class="mt-12 text-center text-xs text-slate-400 max-w-xl mx-auto space-y-2">
+          <p>💳 Pagamento facilitado via Pix à vista ou Cartão de Crédito em até 12x.</p>
+          <p>Início imediato após o preenchimento da anamnese diagnóstica.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. PERGUNTAS FREQUENTES (FAQ)
+         ====================================================================== -->
+    <section id="faq" class="py-24 bg-[#0a0c10] border-t border-white/5 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+          <div class="badge-tag mb-3">
+            <span>Dúvidas Comuns</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Perguntas Frequentes
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Tudo o que você precisa saber antes de iniciar seu acompanhamento.
+          </p>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="space-y-4">
+          
+          <!-- Item 1 -->
+          <div class="faq-item p-6 rounded-2xl bg-[#0e1117] border border-white/5">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left font-bold text-white text-base sm:text-lg">
+              <span>Para quem é indicado o acompanhamento de Paulo Hilário?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed pt-4">
+                O acompanhamento é indicado tanto para iniciantes que precisam de segurança biomecânica e direção certa desde o primeiro dia, quanto para pessoas intermediárias e avançadas que estagnaram nos resultados e querem romper platôs com periodização de alto nível.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item p-6 rounded-2xl bg-[#0e1117] border border-white/5">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left font-bold text-white text-base sm:text-lg">
+              <span>Eu nunca treinei antes, vou conseguir acompanhar?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed pt-4">
+                Com certeza. O método é construído exatamente sobre a sua realidade atual. Começamos com exercícios preparatórios, trabalho de mobilidade e foco absoluto na técnica do movimento, respeitando seu ritmo de adaptação.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item p-6 rounded-2xl bg-[#0e1117] border border-white/5">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left font-bold text-white text-base sm:text-lg">
+              <span>Como funciona o envio e a correção de vídeos pelo WhatsApp?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed pt-4">
+                Durante seus treinos, você pode gravar de 1 a 2 séries dos principais exercícios e enviar diretamente no WhatsApp de Paulo. Ele analisa ângulos articulares, cadência e postura, enviando orientações em áudio ou vídeo para você ajustar imediatamente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item p-6 rounded-2xl bg-[#0e1117] border border-white/5">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left font-bold text-white text-base sm:text-lg">
+              <span>E se eu tiver dores na coluna, ombro ou joelhos?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed pt-4">
+                Todas as limitações anatômicas são levantadas na anamnese diagnóstica inicial. Paulo adapta a escolha dos exercícios para proteger as estruturas sensíveis e fortalecer os músculos estabilizadores, promovendo melhora postural e alívio das dores.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item p-6 rounded-2xl bg-[#0e1117] border border-white/5">
+            <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 text-left font-bold text-white text-base sm:text-lg">
+              <span>Quantos dias na semana eu preciso treinar?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed pt-4">
+                O programa é desenhado de acordo com a sua disponibilidade real de tempo. Seja 3, 4 ou 5 dias por semana, o volume de treino semanal é equalizado para gerar estímulo ideal sem sobrecarregar sua rotina profissional e pessoal.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. CTA FINAL
+         Chamada forte para conversão no WhatsApp
+         ====================================================================== -->
+    <section class="py-24 bg-[#07080a] relative overflow-hidden">
+      
+      <!-- Background Ambient Glow -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/20 to-transparent pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="relative bg-gradient-to-b from-[#111520] to-[#0a0d13] border border-emerald-500/30 rounded-3xl p-8 sm:p-14 text-center overflow-hidden shadow-[0_0_80px_rgba(0,230,118,0.12)]">
+          
+          <!-- Decorative Top Glow Line -->
+          <div class="absolute top-0 left-1/4 right-1/4 h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
+
+          <!-- Subtle 3D Kettlebell Accent Asset in Top Right -->
+          <div class="absolute -top-10 -right-10 w-44 h-44 opacity-25 pointer-events-none hidden sm:block">
+            <img src="images/kettlebell-3d.jpg" alt="Elemento Esportivo 3D" class="w-full h-full object-contain mix-blend-screen">
+          </div>
+
+          <div class="badge-tag mb-4 mx-auto">
+            <span class="pulse-dot"></span>
+            <span>Vagas Limitadas para Acompanhamento Individual</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6 max-w-2xl mx-auto">
+            Pronto para treinar com <br>
+            <span class="text-gradient-emerald">método e resultado</span> de verdade?
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            Seu corpo não responde a treinos genéricos. Dê o primeiro passo para uma evolução consciente, segura e consistente com a supervisão de Paulo Hilário.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+            <a href="https://wa.me/558296140864?text=Ol%C3%A1%2C%20Paulo!%20Estou%20pronto%20para%20come%C3%A7ar%20meu%20acompanhamento%20individual.%20Como%20podemos%20iniciar%3F" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-primary w-full sm:w-auto px-9 py-4 rounded-xl text-base font-bold flex items-center justify-center gap-3 text-black">
+              <!-- WhatsApp Icon SVG -->
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.115-.515-1.815-.75-2.983-2.593-3.074-2.714-.09-.12-1.74-2.316-1.74-4.417 0-2.101 1.08-3.136 1.465-3.565.385-.43 1.009-.43 1.346-.43.144 0 .288.007.414.013.342.016.514.04.743.587.288.697.986 2.413 1.072 2.59.086.177.144.385.03.614-.114.229-.172.373-.343.573-.172.2-.36.446-.514.598-.172.17-.35.355-.15.7.2.345.89 1.465 1.908 2.372 1.309 1.166 2.413 1.528 2.756 1.7.343.172.544.144.744-.086.2-.23 1.009-1.175 1.28-1.577.272-.402.544-.336.915-.2.372.136 2.355 1.11 2.756 1.31.401.2.668.298.766.467.098.17.098.986-.246 1.391z" />
+              </svg>
+              <span>Falar Diretamente com Paulo</span>
+            </a>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-6 mt-8 pt-6 border-t border-white/5 text-xs sm:text-sm text-slate-300">
+            <a href="https://wa.me/558296140864" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <svg class="w-4 h-4 text-emerald-400 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.115-.515-1.815-.75-2.983-2.593-3.074-2.714-.09-.12-1.74-2.316-1.74-4.417 0-2.101 1.08-3.136 1.465-3.565.385-.43 1.009-.43 1.346-.43.144 0 .288.007.414.013.342.016.514.04.743.587.288.697.986 2.413 1.072 2.59.086.177.144.385.03.614-.114.229-.172.373-.343.573-.172.2-.36.446-.514.598-.172.17-.35.355-.15.7.2.345.89 1.465 1.908 2.372 1.309 1.166 2.413 1.528 2.756 1.7.343.172.544.144.744-.086.2-.23 1.009-1.175 1.28-1.577.272-.402.544-.336.915-.2.372.136 2.355 1.11 2.756 1.31.401.2.668.298.766.467.098.17.098.986-.246 1.391z"/></svg>
+              <span>WhatsApp: <strong>+55 (82) 9614-0864</strong></span>
+            </a>
+            <span class="text-white/20 hidden sm:inline">•</span>
+            <a href="https://www.instagram.com/paulohilariopersonal/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <svg class="w-4 h-4 text-emerald-400 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram: <strong>@paulohilariopersonal</strong></span>
+            </a>
+          </div>
+          <p class="text-xs text-slate-500 mt-4">
+            Resposta ágil no WhatsApp • Atendimento individual sem intermediários
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="bg-[#050608] border-t border-white/5 py-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Brand & Description -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center font-bold text-emerald-400 text-sm">
+          PH
+        </div>
+        <div>
+          <span class="font-bold text-white uppercase tracking-wider block leading-none">Paulo Hilário</span>
+          <span class="text-[10px] text-emerald-400 uppercase tracking-widest font-semibold">Personal Trainer</span>
+        </div>
+      </div>
+
+      <!-- Quick Nav Links & Social -->
+      <div class="flex flex-wrap items-center justify-center gap-5 text-xs text-slate-400">
+        <a href="#metodo" class="hover:text-emerald-400 transition-colors">O Método</a>
+        <a href="#servicos" class="hover:text-emerald-400 transition-colors">Serviços</a>
+        <a href="#evolucao" class="hover:text-emerald-400 transition-colors">Evolução</a>
+        <a href="#planos" class="hover:text-emerald-400 transition-colors">Planos</a>
+        <a href="#faq" class="hover:text-emerald-400 transition-colors">FAQ</a>
+        <span class="text-white/20 hidden sm:inline">|</span>
+        <a href="https://www.instagram.com/paulohilariopersonal/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>@paulohilariopersonal</span>
+        </a>
+        <a href="https://wa.me/558296140864" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">
+          (82) 9614-0864
+        </a>
+      </div>
+
+      <!-- Copyright & Disclaimer -->
+      <div class="text-xs text-slate-500 text-center md:text-right">
+        <p>&copy; 2026 Paulo Hilário. Todos os direitos reservados.</p>
+        <p class="text-[10px] text-slate-600 mt-1">Treinamento Personalizado & Biomecânica de Alta Precisão</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       FLOATING WHATSAPP BUTTON
+       ====================================================================== -->
+  <a href="https://wa.me/558296140864?text=Ol%C3%A1%2C%20Paulo!%20Gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20individual." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Falar no WhatsApp com Paulo Hilário"
+     class="whatsapp-float">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.115-.515-1.815-.75-2.983-2.593-3.074-2.714-.09-.12-1.74-2.316-1.74-4.417 0-2.101 1.08-3.136 1.465-3.565.385-.43 1.009-.43 1.346-.43.144 0 .288.007.414.013.342.016.514.04.743.587.288.697.986 2.413 1.072 2.59.086.177.144.385.03.614-.114.229-.172.373-.343.573-.172.2-.36.446-.514.598-.172.17-.35.355-.15.7.2.345.89 1.465 1.908 2.372 1.309 1.166 2.413 1.528 2.756 1.7.343.172.544.144.744-.086.2-.23 1.009-1.175 1.28-1.577.272-.402.544-.336.915-.2.372.136 2.355 1.11 2.756 1.31.401.2.668.298.766.467.098.17.098.986-.246 1.391z" />
+    </svg>
+    <span class="text-sm font-bold text-black tracking-tight">Falar com Paulo</span>
+  </a>
+
+  <!-- Script Interactions -->
+  <script src="script.js"></script>
+</body>
+</html>

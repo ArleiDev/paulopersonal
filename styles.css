@@ -1,0 +1,242 @@
+/* ==========================================================================
+   PAULO HILÁRIO - PERSONAL TRAINER | STYLESHEET
+   Aesthetic: Dark, High-Contrast, Athletic Luxury, Precision Engineering
+   ========================================================================== */
+
+:root {
+  --bg-main: #07080a;
+  --bg-surface: #0e1117;
+  --bg-surface-elevated: #151922;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --emerald-accent: #00e676;
+  --emerald-primary: #10b981;
+  --emerald-dark: #064e3b;
+  --emerald-glow: rgba(0, 230, 118, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-highlight: rgba(0, 230, 118, 0.35);
+}
+
+/* Base resets & typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2533;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--emerald-primary);
+}
+
+/* Custom Utilities & Accents */
+.text-emerald-glow {
+  color: var(--emerald-accent);
+  text-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+.glow-box-emerald {
+  box-shadow: 0 0 35px var(--emerald-glow);
+}
+
+.glow-box-lg {
+  box-shadow: 0 0 60px rgba(0, 230, 118, 0.2);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+.border-accent {
+  border: 1px solid var(--border-highlight);
+}
+
+.bg-surface-glass {
+  background: rgba(14, 17, 23, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  background: rgba(0, 230, 118, 0.08);
+  border: 1px solid rgba(0, 230, 118, 0.25);
+  color: var(--emerald-accent);
+}
+
+/* Pulse animation for active badges */
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--emerald-accent);
+  box-shadow: 0 0 10px var(--emerald-accent);
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Gradient Texts */
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 60%, rgba(255, 255, 255, 0.65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #ffffff 20%, #00e676 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Image blend transitions */
+.hero-image-mask {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.hero-backdrop-mask {
+  mask-image: radial-gradient(circle at 60% 50%, black 30%, rgba(0,0,0,0.5) 60%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle at 60% 50%, black 30%, rgba(0,0,0,0.5) 60%, transparent 95%);
+}
+
+/* Interactive step buttons in Method */
+.step-tab-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.step-tab-btn.active {
+  background: rgba(0, 230, 118, 0.08);
+  border-color: rgba(0, 230, 118, 0.4);
+}
+.step-tab-btn.active .step-number {
+  background: var(--emerald-accent);
+  color: #07080a;
+}
+
+/* Button CTA Hover transitions */
+.btn-primary {
+  background: linear-gradient(135deg, #00e676 0%, #10b981 100%);
+  color: #07080a;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 230, 118, 0.4);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* FAQ Accordion Styling */
+.faq-item {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: border-color 0.2s ease;
+}
+.faq-item.active {
+  border-color: rgba(0, 230, 118, 0.3);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.3s ease-out, padding 0.3s ease;
+  opacity: 0;
+}
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  opacity: 1;
+  padding-bottom: 1.25rem;
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: var(--emerald-accent);
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: #07080a;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-weight: 700;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.6);
+}
+@media (max-width: 640px) {
+  .whatsapp-float span {
+    display: none;
+  }
+  .whatsapp-float {
+    padding: 14px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
