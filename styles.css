@@ -240,3 +240,123 @@ body {
     right: 20px;
   }
 }
+
+/* ==========================================================================
+   TRANSFORMATIONS (ANTES & DEPOIS) GALLERY & LIGHTBOX
+   ========================================================================== */
+.transform-card {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.transform-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 230, 118, 0.15), 0 0 20px rgba(0, 0, 0, 0.8);
+  border-color: rgba(0, 230, 118, 0.45);
+}
+
+.transform-card img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transform-card:hover img {
+  transform: scale(1.04);
+}
+
+.transform-card .zoom-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.transform-card:hover .zoom-overlay {
+  opacity: 1;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(4, 6, 8, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-img {
+  max-height: 80vh;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 230, 118, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(0, 230, 118, 0.2);
+  border-color: var(--emerald-accent);
+  color: var(--emerald-accent);
+  transform: scale(1.1);
+}
+
+/* Authority Section Badges & Cards */
+.authority-card {
+  background: linear-gradient(180deg, #0e121a 0%, #080a0f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+}
+
+.authority-card:hover {
+  border-color: rgba(0, 230, 118, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 230, 118, 0.1);
+}
+
+.seal-badge {
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.15), rgba(16, 185, 129, 0.05));
+  border: 1px solid rgba(0, 230, 118, 0.3);
+}
+

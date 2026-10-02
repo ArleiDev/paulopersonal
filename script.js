@@ -157,4 +157,56 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 5. Image Lightbox Modal Viewer
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+
+  function openLightbox(src, caption) {
+    if (!lightboxModal || !lightboxImg) return;
+    lightboxImg.src = src;
+    if (lightboxCaption) {
+      lightboxCaption.textContent = caption || '';
+    }
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-img-src') || trigger.getAttribute('src');
+      const caption = trigger.getAttribute('data-img-caption') || trigger.getAttribute('alt') || '';
+      if (src) {
+        openLightbox(src, caption);
+      }
+    });
+  });
+
+  if (lightboxCloseBtn) {
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+  }
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal || e.target.classList.contains('lightbox-backdrop')) {
+        closeLightbox();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
 });
+
